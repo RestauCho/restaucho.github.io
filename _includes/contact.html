@@ -1,0 +1,55 @@
+<script type='text/javascript'>
+function sendMail() {
+    var link = "mailto:abellec.22@gmail.com"
+             + "?cc=axel.bellec@outlook.com"
+             + "&subject=" + escape(document.getElementById('name').value)
+             + "&body=" + escape(document.getElementById('message').value)
+    ;
+
+    window.location.href = link;
+}
+</script>
+
+<section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contactez-nous</h2>
+                    <h3 class="section-subheading text-muted">Nous vous répondrons dans les meilleurs délais.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Nom *" id="name" required data-validation-required-message="Veuillez entrer votre nom.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Adresse email *" id="email" required data-validation-required-message="Veuillez entrer votre adresse email.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Numéro de téléphone *" id="phone" required data-validation-required-message="Veuillez entrer votre numéro de téléphone.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Message *" id="message" required data-validation-required-message="Renseignez votre requête."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-xl" onclick="sendMail(); return false">Envoyer </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
