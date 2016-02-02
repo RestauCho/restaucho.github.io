@@ -172,7 +172,7 @@
             if(!_this.active) return;
             ctx.beginPath();
             ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
-            ctx.fillStyle = 'rgba(1134,215,229,'+ _this.active+')';
+            ctx.fillStyle = 'rgba(153,153,255,'+ _this.active+')';
             ctx.fill();
         };
     }
@@ -181,5 +181,5 @@
     function getDistance(p1, p2) {
         return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
     }
-    
+
 })();
